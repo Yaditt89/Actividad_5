@@ -1,0 +1,15 @@
+<div class="continer" id="noticias">
+  <div class="news" *ngFor="let noticia of arrNoticias">
+    <div class="img-news">
+      <img class="img-responsive" [src]="noticia.imagen" alt="" />
+    </div>
+    <div class="desc-news">
+      <h2>{{ noticia.titulo }}</h2>
+      <p>{{ noticia.contenido }}</p>
+      <div class="fecha">
+        <span>{{ noticia.fecha }}</span>
+      </div>
+    </div>
+  </div>
+</div>
+<app-notice (noticia)="recibeNoticia($event)"></app-notice>

@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-color: #959393;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: large;
+}
+.wrapper {
+  margin: auto;
+  max-width: 1366px;
+  line-height: 23px;
+}

@@ -1,0 +1,16 @@
+.continer {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(17, 15, 15);
+  color: #d0d0d0;
+}
+
+.logo {
+  display: flex;
+  width: 4%;
+  align-self: center;
+  padding: 5px 0px;
+}
+.img-responsive {
+  max-width: 100%;
+}

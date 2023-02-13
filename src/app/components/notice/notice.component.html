@@ -1,0 +1,68 @@
+<div class="continer" id="formulario">
+  <div class="img-form">
+    <img
+      class="img-responsive"
+      src="../../../assets/images/kisspng-chinese-noodles-pasta-chinese-cuisine-pad-thai-lo-5d23e8ca04f3c6.0035314115626344420203.png"
+      alt=""
+    />
+  </div>
+  <form class="form-new" [formGroup]="form" (ngSubmit)="enviarNoticia()">
+    <div>
+      <label class="label-form" for="titulo"> Título </label>
+      <input
+        class="input-form"
+        type="text"
+        id="titulo"
+        formControlName="titulo"
+        placeholder="Titulo de la publicación"
+      />
+      <span *ngIf="titulo_invalid" class="alerta"
+        >Debe rellenar este campo</span
+      >
+    </div>
+    <div>
+      <label class="label-form" for="imagen"> Url imagen </label>
+      <input
+        class="input-form"
+        type="text"
+        id="imagen"
+        formControlName="imagen"
+        placeholder="https://example.jpg"
+      />
+      <span *ngIf="imagen_invalid" class="alerta"
+        >Debe rellenar este campo</span
+      >
+      <span *ngIf="url_invalid" class="alerta">Introduzca una URL válida</span>
+    </div>
+    <div>
+      <label class="label-form" for="contenido"> Contenido Noticia</label>
+      <textarea
+        class="textarea-form"
+        type="text"
+        id="contenido"
+        formControlName="contenido"
+        placeholder="Contenido de la publicación"
+      ></textarea>
+      <span *ngIf="contenido_invalid" class="alerta"
+        >Debe rellenar este campo</span
+      >
+    </div>
+    <div>
+      <label class="label-form" for="fecha">Fecha Publicación </label>
+      <input
+        class="input-form"
+        type="date"
+        id="fecha"
+        formControlName="fecha"
+        placeholder="DD/MM/AAAA"
+      />
+      <span *ngIf="fecha_invalid" class="alerta">Debe rellenar este campo</span>
+    </div>
+    <div class="wrapper-botones">
+      <button class="botones enviar" type="submit">Publicar</button>
+      <button class="botones limpiar" type="button" (click)="resetForm()">
+        Limpiar formulario
+      </button>
+    </div>
+  </form>
+</div>
